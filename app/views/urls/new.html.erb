@@ -1,2 +1,11 @@
-<h1>Urls#new</h1>
-<p>Find me in app/views/urls/new.html.erb</p>
+<%=form_with model:@url do |form| %>
+  <fieldset>
+    <legend>Welcome to short.com</legend>
+    <pre></pre>
+    <div class="mb-4">
+      <label for="exampleInputEmail1" class="form-label">please enter your url here</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <button type="submit" class="btn btn-primary">Shorten</button>
+  </fieldset>
+<% end %>
