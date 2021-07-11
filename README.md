@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+### Ruby version
+    Ruby 2.5.7
 
-* Ruby version
+### Rails version
+    Rails 5.2.3
 
-* System dependencies
+## Configuration of the app
+* install Postgres.app(https://www.postgresql.org/download/macosx/)
+* `brew install postgres` (or do elephant version from postgresapp.com)
+* git clone https://github.com/var9un/shorten_url.git
+* get ruby with https://rvm.io/rvm/install
+* `\curl -sSL https://get.rvm.io | bash`
+* `rvm install ruby-2.5.7`
+* `gem install bundler`
+* Go to the project directory
+* `bundle install`
+* start postgres (postgres -D /usr/local/var/postgresql &)
+* `rake db:create`
+* `rake db:migrate`
 
-* Configuration
+### Configuration
+Set following environment variable
 
-* Database creation
+- USER_NAME: '********'
+- PASSWORD: '********'
+- TEST_DB_NAME: '********'
+- DB_NAME: '********'
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### How to run the test suite
+Run the following command in your terminal:
+`rspec`

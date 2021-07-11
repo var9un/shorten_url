@@ -13,9 +13,11 @@
 class Url < ApplicationRecord
   #Validation
   validates :website_url, url: true
+
   #Callback
   before_create :create_slug
   before_create :set_expiration_time
+
   #Associations
   has_many :analytics_records, dependent: :destroy
 
