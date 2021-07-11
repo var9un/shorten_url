@@ -60,8 +60,11 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+#Additional gem included 
 gem 'pg'
 gem 'annotate'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 gem "validate_url"
+gem 'geocoder'

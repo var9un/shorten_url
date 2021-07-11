@@ -1,5 +1,5 @@
 <% if @existing_url || @url.present? %>
-  <% link =  @existing_url || @url %>>
+  <% link =  @existing_url || @url %>
   <% message =  @existing_url ? 'Short url is already exists' : 'Here is your short URL!' %>
   jQuery('#short_form_notification').html("<%=message%>"+ ': '+ "<%= [request.base_url, link.slug].join('/')%>")
 <% else %>
