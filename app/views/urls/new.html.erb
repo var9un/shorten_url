@@ -1,11 +1,13 @@
-<%=form_with model:@url do |form| %>
+<%=form_with model:@url, :remote => true do |form| %>
   <fieldset>
     <legend>Welcome to short.com</legend>
     <pre></pre>
     <div class="mb-4">
       <label for="exampleInputEmail1" class="form-label">please enter your url here</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      <%= form.url_field :website_url, class: "form-control" %>
     </div>
+    <div id="short_form_notification"></div>
+    <pre></pre>
     <button type="submit" class="btn btn-primary">Shorten</button>
   </fieldset>
 <% end %>

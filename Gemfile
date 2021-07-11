@@ -64,3 +64,4 @@ gem 'pg'
 gem 'annotate'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem "validate_url"

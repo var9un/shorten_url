@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_10_144230) do
+ActiveRecord::Schema.define(version: 2021_07_10_164405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 2021_07_10_144230) do
   end
 
   create_table "urls", force: :cascade do |t|
-    t.string "url"
+    t.string "website_url"
     t.string "slug"
     t.integer "no_of_click"
     t.datetime "expire_url_time"
