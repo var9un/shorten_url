@@ -25,6 +25,12 @@ class Url < ApplicationRecord
     analytics.save
   end
 
+  def top_countries
+    url_countries = AnalyticsRecord.pluck(:country)
+    return [] unless url_countries.any?
+    url_countries.group_by {|country| country}.sort_by {|key, country_arr| -country_arr.count}.map(&:first)
+  end
+
 private
   def create_slug
     new_slug = SecureRandom.base64[0...SLUG_LENGTH]

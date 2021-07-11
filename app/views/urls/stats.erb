@@ -1,0 +1,15 @@
+  <fieldset>
+    <legend>Analytics</legend>
+    <pre></pre>
+    <%@urls.each do |data| %>
+
+    <div class="mb-4 border-bottom" >
+      <div><%=data.website_url%></div>
+      <div><%=[request.base_url, data.slug].join('/')%></div>
+      <pre></pre>
+      <div>Total Click: <%=data.no_of_click%></div>
+      <div style='margin:0px 0px 20px 0px;'>Top Countries: <%=data.top_countries.join(', ')%></div>
+    </div>
+    <%end%>
+    <pre></pre>
+  </fieldset>
